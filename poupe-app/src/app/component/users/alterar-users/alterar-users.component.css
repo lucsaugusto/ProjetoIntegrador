@@ -1,0 +1,30 @@
+span{
+    color: red;
+}
+
+#fraca {
+    color: red;
+}
+#forte {
+    color: green;
+}
+
+#sucesso {
+    color: green;
+    font-style: bold;
+}
+
+h3{
+    color: black;
+}
+
+.btn{
+    color: white;
+    /* background-color: rgb(32, 56, 112); */
+    background-color: black;
+    outline-color: none;
+}
+
+.btn:hover {
+    color: #FFD15D;
+}

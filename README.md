@@ -1,1 +1,2 @@
-# ProjetoIntegrador
+# PoupeApp
+Projeto Integrador Generation

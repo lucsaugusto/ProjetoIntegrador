@@ -1,0 +1,113 @@
+footer {
+    color: white;
+    background-attachment: fixed;
+    background-color: rgb(80, 91, 100);
+    background-size: cover;
+    background-position: bottom;
+}
+
+footer p {
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+footer h5 {
+    color: white;
+}
+
+.social-pet li {
+    display: inline-block;
+    margin-right: 10px;
+    
+}
+
+.social-pet li a {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    text-align: center;
+    display: block;
+    line-height: 35px;
+    background-color: #3a5a95;
+    color: white;
+}
+
+.social-pet li:nth-child(2) a {
+    background-color: #326d9b;
+}
+
+.social-pet li:nth-child(3) a {
+    background-color: #dd4f43;
+}
+
+.social-pet li:nth-child(4) a {
+    background-color: #6b27b2;
+}
+
+.social-pet li a:hover {
+    background-color: #0141a2;
+}
+
+.social-pet li a:hover i {
+    transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+}
+
+.recent-post li {
+    display: inline-block;
+    color: white;
+
+    margin-left: -15%;
+    list-style: none;
+}
+
+.recent-post li label {
+    float: left;
+    color: white;
+    padding: 1px 7px;
+    text-align: center;
+}
+
+.recent-post li label span {
+    color: white;
+}
+
+footer .input-group-addon {
+    background-color: #0141a2;
+    padding: 10px;
+}
+
+.f-address li {
+    margin-left: -15%;
+    list-style: none;
+}
+
+.f-address li i {
+    color: white;
+    font-size: 18px;
+}
+
+.f-address li a {
+    color: white;
+}
+
+.copyright {
+    background-color: black;
+    padding: 12px 0;
+    font-size: 14px;
+}
+
+#bUp {
+    bottom: 30px;
+    right: 30px;
+    padding: 15px;
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    color: #FFD15D;
+}

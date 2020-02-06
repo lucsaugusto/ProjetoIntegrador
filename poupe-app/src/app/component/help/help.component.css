@@ -1,0 +1,70 @@
+h2 {
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Roboto Slab', serif;
+}
+
+.textarea {
+    resize: none;
+}
+
+.pergunta {
+    font-family: 'Roboto Slab', serif;
+    font-size: 17pt;
+    text-decoration: none;
+    
+}
+
+.resposta {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12pt;
+    text-decoration: none;
+}
+
+.title {
+    font-family: 'Roboto Slab', serif;
+    font-size: 22pt;
+    text-decoration: none;
+    margin-top: 2%;
+}
+.card-header{
+    background-color: white;
+}
+
+.card-body {
+    background-color: rgb(238, 238, 238);
+    text-align: justify;
+}
+
+h4 {
+    font-size: 2.5rem;
+}
+span {
+    color: red;
+}
+#sucesso {
+    color: green;
+}
+
+#falha {
+    color: red;
+}
+
+.btn{
+    color: white;
+    /* background-color: rgb(32, 56, 112); */
+    background-color: black;
+    outline-color: none;
+}
+
+.btn:hover {
+    color: #FFD15D;
+}
+.btn-link {
+    background-color: white;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}

@@ -1,0 +1,54 @@
+.textarea {
+    resize: none;
+}
+
+.card {
+    width: 50%;
+    padding: 0px 0px 0px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    position: relative;
+    z-index: 1;
+    border: 5px;
+}
+.body {
+    width: 50%;
+    padding: 30px 15px 0px 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    position: relative;
+    z-index: 1;
+    border: 5px;
+}
+span{
+    color: red;
+}
+
+
+#sucesso {
+    color: green;
+}
+
+#falha {
+    color: red;
+}
+
+.title {
+    font-family: 'Roboto Slab', serif;
+    font-size: 22pt;
+    text-decoration: none;
+    margin-top: 2%;
+}
+
+.btn{
+    color: white;
+    /* background-color: rgb(32, 56, 112); */
+    background-color: black;
+    outline-color: none;
+}
+
+.btn:hover {
+    color: #FFD15D;
+}

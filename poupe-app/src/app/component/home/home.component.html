@@ -1,0 +1,33 @@
+<div class="container-fluid bg-light">
+
+    <div class="row py-5 mt-5 text-center justify-content-around">
+
+        <div class="col-xl-8 col-sm-4 mb-5">
+
+            <div class="bg-white rounded shadow-sm pb-3 px-4">
+
+                <div class="text-center p-2 pt-0" id="formulario">
+                    <h3 class="display-4 mt-3 title">Seja bem-vindx!</h3>
+                    <h3 class="display-4 mb-3 title">{{username}}</h3>
+                    <div class="mt-3">
+                        <hr>
+                    </div>
+                    <img class="rounded" src="assets/bem_vindos.gif" alt="" width="650">
+                    <div id="sign-up" class="form-horizontal ">
+                        <br />
+                        <div class="">
+                            <button type="submit" class="btn" width="" [routerLink]="'/feed'"> Vamos
+                                Poupar?
+                            </button>
+                            <br>
+                            <span id="sucesso" *ngIf='_msgEnvioDados'>{{_msgEnvioDados}}</span>
+                            <span id="falha" *ngIf='_msgErroEmail'>{{_msgErroEmail}}</span>
+                            <span id="falha" *ngIf='_msgCampoVazio'>{{_msgCampoVazio}}</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
