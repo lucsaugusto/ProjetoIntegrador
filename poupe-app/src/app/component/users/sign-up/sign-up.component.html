@@ -1,9 +1,8 @@
-
 <div class="container-fluid bg-light">
 
     <div style="height: 120px;">
     </div>
-    
+
     <div class="row text-center justify-content-around">
 
         <div class="col-xl-10 col-sm-10 mb-5">
@@ -47,7 +46,7 @@
                         <div class="form-group form-group-margin">
                             <label for="nome">Senha</label>
                             <input type="password" value="" class="form-control" id="senha"
-                                placeholder="Digite sua senha" maxlength="25"[(ngModel)]="user.senha" required>
+                                placeholder="Digite sua senha" maxlength="25" [(ngModel)]="user.senha" required>
                             <span *ngIf='_msgErroSenha'>{{_msgErroSenha}}</span>
                             <span id="forte" *ngIf='_msgSenhaForte'>{{_msgSenhaForte}}</span>
                             <span id="fraca" *ngIf='_msgSenhaFraca'>{{_msgSenhaFraca}}</span>
@@ -61,38 +60,55 @@
                             <span *ngIf='_msgConfirmaSenha'>{{_msgConfirmaSenha}}</span>
                         </div>
                         <br>
-                        <div class="form-group  keep-newsletter">
-                            <div class="col-md-12 ">
-                                <div class="checkbox-regular">
-                                    <label class="margin-bottom-10">
-                                        <input type="checkbox" id="u_newsletter" name="u_newsletter"
-                                            class="regular-checkbox" value="1" checked=""><label
-                                            for="u_newsletter"></label> Assine nossa Newsletter </label>
-                                </div>
-                            </div>
-                        </div>
                         <div class="form-group ">
                             <div class="gdpr_text">Ao se inscrever, você concorda com nossos <a href=""
-                                    target="gdpr-compliance" class="">Termos de Serviço</a> e <a href=""
-                                    target="gdpr-compliance" class="privacypolicy">Política
-                                    de
-                                    Privacidade</a>.
+                                    target="gdpr-compliance" class="" data-toggle="modal"
+                                    data-target="#ModalLongoExemplo">Termos de Serviço e Politica de Privacidade.</a>
                             </div>
                             <br>
                             <div class="form-group">
-                                <button type="submit" class="btn mr-5" width=""
-                                    (click)="validacao()">Cadastrar</button>
-                                    <span id ="sucesso" *ngIf='_msgEnvioDados'>{{_msgEnvioDados}}</span>
-                                    <span id ="falha" *ngIf='_msgErroEmail'>{{_msgErroEmail}}</span>
-                                    <span id ="falha" *ngIf='_msgCampoVazio'>{{_msgCampoVazio}}</span>
+                                <button type="submit" class="btn mr-5" (click)="validacao()">Cadastrar</button>
+                                <span id="sucesso" *ngIf='_msgEnvioDados'>{{_msgEnvioDados}}</span>
+                                <span id="falha" *ngIf='_msgErroEmail'>{{_msgErroEmail}}</span>
+                                <span id="falha" *ngIf='_msgCampoVazio'>{{_msgCampoVazio}}</span>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
-        
+
     </div>
 
 
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="ModalLongoExemplo" tabindex="-1" role="dialog" aria-labelledby="TituloModalLongoExemplo"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="TituloModalLongoExemplo">Termos de Serviço e Politica de Privacidade</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Os termos de uso e a politica de privacidade regem o uso da aplicação www.poupeapp.com. Esses termos de
+                uso e a politica de privacidade irão estabelecer algumas condições importantes para a utilização do
+                PoupeApp. O usuário deverá aceitar os termos de uso para poder utilizar a aplicação. Os termos de uso dá
+                uma licença de uso do PoupeApp para os usuários e regularizam o relacionamento entre a plataforma e os
+                usuários. Portanto, é necessário aceitar os termos para a utilização de qualquer forma o site. Caso o
+                usuário não aceite ou infracione os presentes termos, ele estará violando os presentes termos de uso,
+                assim como violará o direito autoral do PoupeApp.
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
 </div>

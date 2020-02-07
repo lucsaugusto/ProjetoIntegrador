@@ -8,17 +8,17 @@ import { LoginService } from 'src/app/service/login.service';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-  private nome: string = "";
-  private email: string = "";
-  private tel: string = "";
-  private msg: any = "";
-  private filtro: any = /^([a-zA-zà-úÀ-Ú]|\s+)+$/;
-  private num: any = /^[0-9]+$/;
-  private _msgErroN: string = null;
-  private _msgErroE: string = null;
-  private _msgErroT: string = null;
-  private _msgEnvioDados: string;
-  private _msgCampoVazio: string;
+   nome: string = "";
+   email: string = "";
+   tel: string = "";
+   msg: any = "";
+   filtro: any = /^([a-zA-zà-úÀ-Ú]|\s+)+$/;
+   num: any = /^[0-9]+$/;
+   _msgErroN: string = null;
+   _msgErroE: string = null;
+   _msgErroT: string = null;
+   _msgEnvioDados: string;
+   _msgCampoVazio: string;
 
   username: string;
   constructor(private router: Router, private loginService: LoginService) { }

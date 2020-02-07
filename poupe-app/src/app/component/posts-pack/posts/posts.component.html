@@ -17,25 +17,25 @@
                     <div class="form-group">
                         <label for="nome">Nome do produto</label>
                         <input type="text" class="form-control" id="nome" placeholder="Nome do produto."
-                            [(ngModel)]="post.titulo" maxlength="60" (click)="limpar()" required>
-                        <span *ngIf='_msgErroN'>{{_msgErroN}}</span>
+                            [(ngModel)]="post.titulo" maxlength="60" required>
+                        <!-- <span *ngIf='_msgErroN'>{{_msgErroN}}</span> -->
                     </div>
                     <div class="form-group">
                         <label for="imagem">URL da imagem</label>
                         <input type="text" class="form-control" id="post.linkimg" placeholder="Insira a URL da imagem."
-                            [(ngModel)]="post.linkimg" maxlength="200" (click)="limpar()" required>
-                        <span *ngIf='_msgErroE'>{{_msgErroE}}</span>
+                            [(ngModel)]="post.linkimg" maxlength="200" required>
+                        <!-- <span *ngIf='_msgErroE'>{{_msgErroE}}</span> -->
                     </div>
                     <div class="form-group">
                         <label for="imagem">Preço</label>
                         <input type="text" class="form-control" id="preco" placeholder="Digite a data da promoção."
-                            [(ngModel)]="post.preco" maxlength="10" (click)="limpar()" required>
-                        <span *ngIf='_msgErroE'>{{_msgErroE}}</span>
+                            [(ngModel)]="post.preco" maxlength="10" required>
+                        <!-- <span *ngIf='_msgErroE'>{{_msgErroE}}</span> -->
                     </div>
                     <div class="form-group">
                         <label for="descrição">Descrição da Promoção</label>
                         <textarea class="form-control textarea" [(ngModel)]="post.texto" id="mensagem"
-                            placeholder="Escreva mais informações sobre o produto.                Ex.:Local, preço e quantidade. "
+                            placeholder="Escreva mais informações sobre o produto. Ex.:Local, preço e quantidade. "
                             rows="5" maxlength="400" required></textarea>
                     </div>
 

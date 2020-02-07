@@ -16,14 +16,10 @@
                     <div id="sign-up" class="form-horizontal ">
                         <br />
                         <div class="">
-                            <button type="submit" class="btn" width="" [routerLink]="'/feed'"> Vamos
+                            <button type="submit" class="btn" [routerLink]="'/feed'"> Vamos
                                 Poupar?
                             </button>
                             <br>
-                            <span id="sucesso" *ngIf='_msgEnvioDados'>{{_msgEnvioDados}}</span>
-                            <span id="falha" *ngIf='_msgErroEmail'>{{_msgErroEmail}}</span>
-                            <span id="falha" *ngIf='_msgCampoVazio'>{{_msgCampoVazio}}</span>
-
                         </div>
                     </div>
                 </div>

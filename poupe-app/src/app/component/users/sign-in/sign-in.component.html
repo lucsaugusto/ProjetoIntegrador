@@ -1,4 +1,3 @@
-
 <div class="container-fluid bg-light">
     <div style="height: 120px;">
     </div>
@@ -17,45 +16,80 @@
                 <div class="container text-left" id="formulario">
                     <div id="sign-up" class="form-horizontal ">
 
-                        <div class="form-group form-group-margin" >
+                        <div class="form-group form-group-margin">
                             <label for="nome">Email</label>
                             <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com.br"
                                 [(ngModel)]="login.email" (click)="limpar()" maxlength="40" required>
                         </div>
 
-                        <br/>
+                        <br />
 
                         <div class="form-group form-group-margin">
                             <label for="nome">Senha</label>
                             <input type="password" value="" class="form-control" id="senha"
                                 placeholder="Digite sua senha" maxlength="25" [(ngModel)]="login.senha" required>
-                            <span *ngIf='_msgErroSenha'>{{_msgErroSenha}}</span>
+                            <!-- <span *ngIf='_msgErroSenha'>{{_msgErroSenha}}</span> -->
                         </div>
 
                         <div class="form-group ">
-                            <br/>
-                            <label class="t1-label remember">
-                                    <input type="checkbox" value="2" name="remember_me" checked="checked">Lembrar-me
-                                    <a class="Esqueceu" href="/sign-up">Esqueceu a senha?</a>
-                                </label>  
-                            
+                            <div class="mb-2">
+                                <label class="t1-label remember">
+                                    <!-- <input type="checkbox" value="2" name="remember_me" checked="checked">Lembrar-me -->
+                                    <a class="Esqueceu" href="" data-toggle="modal"
+                                        data-target="#ExemploModalCentralizado">Esqueceu a senha?</a>
+                                </label>
+                            </div>
+
+
                             <div class="">
                                 <button type="submit" class="btn mr-5" width="" (click)="fazerLogin()"> Entrar </button>
                                 <br>
-                                <span id ="sucesso" *ngIf='_msgEnvioDados'>{{_msgEnvioDados}}</span>
-                                <span id ="falha" *ngIf='_msgErroEmail'>{{_msgErroEmail}}</span>
-                                <span id ="falha" *ngIf='_msgCampoVazio'>{{_msgCampoVazio}}</span>
-                                
-                            </div>                       
-                            <br/>                                                  
-                            <p class="izU2O">Não tem uma conta? <a href="/cadastrar"><span
-                               class="Cadastre-se">Cadastre-se</span></a></p>
+                                <span id="sucesso" *ngIf='_msgEnvioDados'>{{_msgEnvioDados}}</span>
+                                <span id="falha" *ngIf='_msgErroEmail'>{{_msgErroEmail}}</span>
+                                <span id="falha" *ngIf='_msgCampoVazio'>{{_msgCampoVazio}}</span>
+
+                            </div>
+                            <br />
+                            <p class="izU2O">Não tem uma conta? <a [routerLink]="'/cadastrar'"><span
+                                        class="Cadastre-se">Cadastre-se</span></a></p>
+
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog"
+                                aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="TituloModalCentralizado">Redefinir Senha</h5>
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="Fechar">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <div class="form-group form-group-margin">
+                                                <label for="nome">Digite seu Email</label>
+                                                <label for="inputUsername"
+                                                    class="no-mobile-display none-display">Endereço de e-mail</label>
+                                                <input type="email" class="form-control" id="email"
+                                                    placeholder="nome@exemplo.com.br" [(ngModel)]="login.email"
+                                                    (click)="limpar()" maxlength="40" required>
+                                            </div>
+
+                                        </div>
+                                        <div class="modal-footer">
+
+                                            <button type="button" class="btn btn-primary"
+                                                (click)=emailEnviado()>OK</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
-        </div>
-    </div>
-    <div style="height: 100px;">
-    </div>
-</div>
+
+            <div style="height: 100px;"></div>

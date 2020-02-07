@@ -10,28 +10,28 @@ import { Router } from '@angular/router';
 })
 
 export class SignUpComponent implements OnInit {
-  private user: Users = new Users(0,"","","","",null,null,null,null);
+  public user: Users = new Users(0, "", "", "", "", null, null, null, null);
   public users: Users[];
   senhaConf: string;
-  private filtro: any = /^([a-zA-zà-úÀ-Ú]|\s+)+$/;
-  private num: any = /^[0-9]+$/;
-  private verfSenha: any = /^([@#$%&a-zA-zà-úÀ-Ú0-9])+$/;
-  private verfCaractere: any = /([@#$%&])/;
+  filtro: any = /^([a-zA-zà-úÀ-Ú]|\s+)+$/;
+  num: any = /^[0-9]+$/;
+  verfSenha: any = /^([@#$%&a-zA-zà-úÀ-Ú0-9])+$/;
+  verfCaractere: any = /([@#$%&])/;
 
-  private _msgErroNome: string = null;
-  private _msgErroSobrenome: string = null;
-  private _msgErroEmail: string = null;
-  private _msgErroTel: string = null;
-  private _msgErroCel: string = null;
-  private _msgErroSenha: string = null;
-  private _msgSenhaForte: string = null;
-  private _msgSenhaFraca: string = null;
-  private _msgConfirmaSenha: string = null;
-  private _msgExisteEmail: string = null;
-  private _msgEnvioDados: string = null;
-  private _msgErroE: string = null;
-  private _msgErroT: string = null;
-  private _msgCampoVazio: string;
+  _msgErroNome: string = null;
+  _msgErroSobrenome: string = null;
+  _msgErroEmail: string = null;
+  _msgErroTel: string = null;
+  _msgErroCel: string = null;
+  _msgErroSenha: string = null;
+  _msgSenhaForte: string = null;
+  _msgSenhaFraca: string = null;
+  _msgConfirmaSenha: string = null;
+  _msgExisteEmail: string = null;
+  _msgEnvioDados: string = null;
+  _msgErroE: string = null;
+  _msgErroT: string = null;
+  _msgCampoVazio: string;
 
   constructor(private usersService: UsersService, private router: Router) { }
 

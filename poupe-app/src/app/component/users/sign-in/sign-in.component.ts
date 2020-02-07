@@ -13,15 +13,15 @@ import { Globals } from 'src/app/model/globals';
 })
 export class SignInComponent implements OnInit {
 
-  private login: Users = new Users(0,"","","","",null,null,null,null);
-  private _msgEnvioDados: string = null;
-  private _msgErroEmail: string = null;
-  private _msgCampoVazio: string = null;
+  login: Users = new Users(0, "", "", "", "", null, null, null, null);
+  _msgEnvioDados: string = null;
+  _msgErroEmail: string = null;
+  _msgCampoVazio: string = null;
   constructor(private router: Router, private route: ActivatedRoute, private loginService: LoginService) { }
 
   ngOnInit() {
-    if(localStorage.getItem("logado"))
-    this.router.navigate(['home']);
+    if (localStorage.getItem("logado"))
+      this.router.navigate(['home']);
     window.scrollTo(0, 0);
   }
 
@@ -40,7 +40,7 @@ export class SignInComponent implements OnInit {
         this.login.senha = "";
         localStorage.setItem("token", res.token);
         localStorage.setItem("logado", "true");
-        window.location.reload();   
+        window.location.reload();
       },
         error => {
           this._msgErroEmail = "Falha! O usuário não existe";
@@ -61,5 +61,8 @@ export class SignInComponent implements OnInit {
       this._msgErroEmail = "";
       this._msgEnvioDados = "";
     }
+  }
+  emailEnviado() {
+    alert("Em breve enviaremos um link para redefinir sua senha")
   }
 }

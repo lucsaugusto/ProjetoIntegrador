@@ -12,10 +12,10 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
   login(login: Users){
-    return this.http.post(`http://localhost:8080/usuario/login`, login);
+    return this.http.post(`http://poupeapp.com:8080/usuario/login`, login);
   }
 
   loginInfo(token: string){
-    return this.http.get(`http://localhost:8080/usuario/info?token=`+ token);
+    return this.http.get(`http://poupeapp.com:8080/usuario/info?token=`+ token);
   }
 }

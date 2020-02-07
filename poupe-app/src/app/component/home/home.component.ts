@@ -20,9 +20,5 @@ export class HomeComponent implements OnInit {
     if(!localStorage.getItem("logado")){
       this.router.navigate(['login']);
     }
-    // else {
-    //   this.username = Globals.user.nome;
-    //   alert("nome: " + Globals.user.nome)
-    // }
   }
 }

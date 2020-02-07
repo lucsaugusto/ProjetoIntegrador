@@ -14,6 +14,7 @@
                 <li class="nav-item active"><a [routerLink]="'/ajuda'" class="nav-link font-bold text-dark"> Ajuda </a></li>
                 <li class="nav-item active"><a [routerLink]="'/consultar'" class="nav-link font-bold text-dark" *ngIf='user != null'> Usuários </a></li>
                 <li class="nav-item active"><a [routerLink]="'/login'" class="nav-link font-bold text-dark" *ngIf='user == null'><button class="btn log ml-3">Login</button></a></li>
+                <li class="nav-item active"><a [routerLink]="'/cadastrar'" class="nav-link font-bold text-dark" *ngIf='user == null'><button class="btn log">Cadastre-se</button></a></li>
                 <div class="btn-group dropdown ml-3 mr-0 p-0" *ngIf='user != null'>
                     <button type="button" class="btn dropdown-toggle p-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{username}}</button>
                     <div class="dropdown-menu">
@@ -21,10 +22,6 @@
                         <li class="nav-item active p-2"><a [routerLink]="'/login'" id="logout" class="nav-link font-bold text-dark" (click)="logout()">Logout</a></li>
                     </div>
                 </div>
-
-                
-
-                
             </ul>
         </div>
     </div>

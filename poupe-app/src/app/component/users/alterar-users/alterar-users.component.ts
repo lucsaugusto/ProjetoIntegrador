@@ -19,22 +19,22 @@ export class AlterarUsersComponent implements OnInit {
   users: Users[];
   novo: boolean = false;
   senhaConf: string;
-  private filtro: any = /^([a-zA-zà-úÀ-Ú]|\s+)+$/;
-  private num: any = /^[0-9]+$/;
-  private verfSenha: any = /^([@#$%&a-zA-zà-úÀ-Ú0-9])+$/;
-  private verfCaractere: any = /([@#$%&])/;
+   filtro: any = /^([a-zA-zà-úÀ-Ú]|\s+)+$/;
+   num: any = /^[0-9]+$/;
+   verfSenha: any = /^([@#$%&a-zA-zà-úÀ-Ú0-9])+$/;
+   verfCaractere: any = /([@#$%&])/;
 
-  private _msgErroNome: string = null;
-  private _msgErroSobrenome: string = null;
-  private _msgErroEmail: string = null;
-  private _msgErroTel: string = null;
-  private _msgErroCel: string = null;
-  private _msgErroSenha: string = null;
-  private _msgSenhaForte: string = null;
-  private _msgSenhaFraca: string = null;
-  private _msgConfirmaSenha: string = null;
-  private _msgnovoEmail: string = null;
-  private _msgEnvioDados: string = null;
+   _msgErroNome: string = null;
+   _msgErroSobrenome: string = null;
+   _msgErroEmail: string = null;
+   _msgErroTel: string = null;
+   _msgErroCel: string = null;
+   _msgErroSenha: string = null;
+   _msgSenhaForte: string = null;
+   _msgSenhaFraca: string = null;
+   _msgConfirmaSenha: string = null;
+   _msgnovoEmail: string = null;
+   _msgEnvioDados: string = null;
 
   constructor(private route: ActivatedRoute, private router: Router, private usersService: UsersService, private loginService: LoginService) { }
 

@@ -10,22 +10,22 @@ export class PostsService {
   constructor(private http: HttpClient) { }
   
   getAll(){
-    return this.http.get(`http://localhost:8080/postagem`); 
+    return this.http.get(`http://poupeapp.com/postagem`); 
   }
 
   getById(idPostagem: number){
-    return this.http.get(`http://localhost:8080/postagem/${idPostagem}`);
+    return this.http.get(`http://poupeapp.com/postagem/${idPostagem}`);
   }
 
   getByPalavra(palavra: string){
-    return this.http.get(`http://localhost:8080/postagem/busca?palavra=`+ palavra);
+    return this.http.get(`http://poupeapp.com/postagem/busca?palavra=`+ palavra);
   }
 
   insert(post: Posts){
-    return this.http.post(`http://localhost:8080/postagem`, post);
+    return this.http.post(`http://poupeapp.com/postagem`, post);
   }
 
   update(post: Posts){
-    return this.http.put(`http://localhost:8080/postagem`, post);
+    return this.http.put(`http://poupeapp.com/postagem`, post);
   }
 }
