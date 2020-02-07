@@ -8,4 +8,5 @@ import com.poupeapp.PoupeApp.entity.Postagem;
 
 public interface PostagemRepository extends CrudRepository<Postagem, Integer>{
 	List<Postagem> findAllByTitulo(String titulo);
+	List<Postagem> findAllByTituloContains(String palavra);
 }

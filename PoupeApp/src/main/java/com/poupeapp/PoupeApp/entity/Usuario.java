@@ -10,8 +10,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-import org.hibernate.validator.constraints.UniqueElements;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
@@ -24,7 +22,7 @@ public class Usuario {
 	@Column(length = 100)
 	private String nome;
 	
-	@Column(length = 150, unique=true)
+	@Column(length = 150)
 	private String email;
 	
 	@Column(length = 11)

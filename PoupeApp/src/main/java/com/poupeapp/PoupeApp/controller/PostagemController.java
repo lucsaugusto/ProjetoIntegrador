@@ -63,9 +63,9 @@ public class PostagemController {
 		return ResponseEntity.ok(this.service.getAll());
 	}
 	
-	@GetMapping("/postagem/palavra/{palavra}")
-	public ResponseEntity<List<Postagem>> getAllByTitulo(@PathVariable String titulo){
-		List<Postagem> postagens = this.service.getAllByTitulo(titulo);
+	@GetMapping("/postagem/busca")
+	public ResponseEntity<List<Postagem>> getAllByPalavra(@RequestParam String palavra){
+		List<Postagem> postagens = this.service.getAllByTituloContains(palavra);
 		
 		if(postagens == null)
 			return ResponseEntity.notFound().build();

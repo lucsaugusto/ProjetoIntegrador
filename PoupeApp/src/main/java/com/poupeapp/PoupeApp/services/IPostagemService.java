@@ -14,4 +14,6 @@ public interface IPostagemService {
 	Postagem getById(int id);
 	
 	List<Postagem> getAllByTitulo(String titulo);
+
+	List<Postagem> getAllByTituloContains(String palavra);
 }

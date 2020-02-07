@@ -40,4 +40,9 @@ public class PostagemServiceImpl implements IPostagemService{
 		return this.repository.findAllByTitulo(titulo);
 	}
 
+	@Override
+	public List<Postagem> getAllByTituloContains(String palavra) {
+		return (List<Postagem>) this.repository.findAllByTituloContains(palavra);
+	}
+
 }
