@@ -1,7 +1,6 @@
-import { Posts } from './../model/posts';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { Posts } from './../../model/posts';
 @Injectable({
   providedIn: 'root'
 })
