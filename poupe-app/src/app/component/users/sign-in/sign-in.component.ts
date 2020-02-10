@@ -17,6 +17,9 @@ export class SignInComponent implements OnInit {
   _msgEnvioDados: string = null;
   _msgErroEmail: string = null;
   _msgCampoVazio: string = null;
+
+
+  userLogado: any;
   constructor(private router: Router, private route: ActivatedRoute, private loginService: LoginService) { }
 
   ngOnInit() {
@@ -40,7 +43,11 @@ export class SignInComponent implements OnInit {
         this.login.senha = "";
         localStorage.setItem("token", res.token);
         localStorage.setItem("logado", "true");
-        window.location.reload();
+        this.loginService.userChanged.next(true);
+        this.loginService.logado.next(true);
+        this.loginService.email.next("Minha Conta");
+        this.router.navigate(['home']);
+        
       },
         error => {
           this._msgErroEmail = "Falha! O usuário não existe";

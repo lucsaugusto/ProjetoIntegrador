@@ -5,6 +5,7 @@ import { UsersService } from 'src/app/service/users/users.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Globals } from 'src/app/model/globals';
 import { LoginService } from 'src/app/service/login.service';
+import { Posts } from 'src/app/model/posts';
 
 @Component({
   selector: 'app-alterar-users',
@@ -17,6 +18,8 @@ export class AlterarUsersComponent implements OnInit {
   username: string;
   user: Users = new Users(0,"","","","",null,null,null,null);
   users: Users[];
+  posts: Posts[];
+
   novo: boolean = false;
   senhaConf: string;
    filtro: any = /^([a-zA-zà-úÀ-Ú]|\s+)+$/;
@@ -50,12 +53,21 @@ export class AlterarUsersComponent implements OnInit {
 
   findById(id: number) {
     this.usersService.getById(id).subscribe((user: Users) => {
-      this.user = user;
+    this.user = user;
+    for (let index = 0; index < user.postagem.length; index++) {
+      this.user.postagem[index] = user.postagem[index];
+    }
+      
+      alert(user.postagem[1].idPostagem);
+      this.user.postagem = this.posts;
     }, err => {
       console.log(`Erro cod: ${err.status}`);
     });
   }
 
+  buscaPosts(){
+
+  }
 
   verificarForca() {
     if (this.user.senha.length < 10 || !this.verfSenha.test(this.user.senha)) {

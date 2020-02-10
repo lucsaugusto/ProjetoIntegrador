@@ -1,25 +1,44 @@
 <div class="navbar navbar-expand-lg navbar-light fixed-top navColor">
     <div class="container ">
+        <!-- <a [routerLink]="'/feed'" class="navbar-brand d-flex align-items-center text-secondary"><img
+                src="./../../../assets/logoNav.png" height="50px" alt=""></a> -->
+
         <a href="#" class="navbar-brand d-flex align-items-center text-secondary"><img
                 src="./../../../assets/logoNav.png" height="50px" alt=""></a>
+
 
         <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
             class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
         <div id="navbarSupportedContent" class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a [routerLink]="'/feed'" class="nav-link font-bold text-dark" *ngIf='user != null'> Início </a></li>
-                <li class="nav-item active"><a [routerLink]="'/sobre'" class="nav-link font-bold text-dark"> Sobre </a></li>
-                <li class="nav-item active"><a [routerLink]="'/contato'" class="nav-link font-bold text-dark"> Contato </a></li>
-                <li class="nav-item active"><a [routerLink]="'/ajuda'" class="nav-link font-bold text-dark"> Ajuda </a></li>
-                <li class="nav-item active"><a [routerLink]="'/consultar'" class="nav-link font-bold text-dark" *ngIf='user != null'> Usuários </a></li>
-                <li class="nav-item active"><a [routerLink]="'/login'" class="nav-link font-bold text-dark" *ngIf='user == null'><button class="btn log ml-3">Login</button></a></li>
-                <li class="nav-item active"><a [routerLink]="'/cadastrar'" class="nav-link font-bold text-dark" *ngIf='user == null'><button class="btn log">Cadastre-se</button></a></li>
-                <div class="btn-group dropdown ml-3 mr-0 p-0" *ngIf='user != null'>
-                    <button type="button" class="btn dropdown-toggle p-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{username}}</button>
+                <span></span>
+                <li class="nav-item active"><a [routerLink]="'/feed'" class="nav-link font-bold text-dark"
+                        *ngIf='inicioButton == true'> Início <span class="sr-only">(página atual)</span></a></li>
+                <li class="nav-item active"><a [routerLink]="'/sobre'" class="nav-link font-bold text-dark"> Sobre </a>
+                </li>
+                <li class="nav-item active"><a [routerLink]="'/contato'" class="nav-link font-bold text-dark"> Contato
+                    </a></li>
+                <li class="nav-item active"><a [routerLink]="'/ajuda'" class="nav-link font-bold text-dark"> Ajuda
+                        </a></li>
+                <li class="nav-item active"><a [routerLink]="'/consultar'" class="nav-link font-bold text-dark"
+                        *ngIf='usersButton == true'> Usuários </a></li>
+                <!-- <li class="nav-item active"><a [routerLink]="'/login'" class="nav-link font-bold text-dark" *ngIf='logado == false'><button class="btn log ml-3">Login</button></a></li>
+                <li class="nav-item active"><a [routerLink]="'/login'" class="nav-link font-bold text-dark" *ngIf='logado == true'><button class="btn log ml-3">Logout</button></a></li> -->
+
+                <li class="nav-item active"><a [routerLink]="'/login'" class="nav-link font-bold text-dark"
+                        *ngIf='loginButton == true'><button class="btn log ml-3">Login</button></a></li>
+                <li class="nav-item active "><a [routerLink]="'/cadastrar'" class="nav-link font-bold text-dark"
+                        *ngIf='cadButton == true'><button class="btn log">Cadastre-se</button></a></li>
+                <div class="btn-group dropdown ml-3 mr-0 p-0" *ngIf='userButton == true'>
+                    <button type="button" class="btn dropdown-toggle p-2" (click)="buscaInfo()" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">Minha Conta</button>
                     <div class="dropdown-menu">
-                        <li class="nav-item active p-2"><a [routerLink]="['/editar', user.idUsuario]" class="nav-link font-bold text-dark" >Editar</a></li>
-                        <li class="nav-item active p-2"><a [routerLink]="'/login'" id="logout" class="nav-link font-bold text-dark" (click)="logout()">Logout</a></li>
+                        <li class="nav-item active p-2"><a [routerLink]="['/editar', user.idUsuario]"
+                                class="nav-link font-bold text-dark">Editar</a></li>
+                        <li class="nav-item active p-2"><a id="logout" class="nav-link font-bold text-dark"
+                                (click)="logout()" [routerLink]="'/login'">Logout</a></li>
+                                
                     </div>
                 </div>
             </ul>
