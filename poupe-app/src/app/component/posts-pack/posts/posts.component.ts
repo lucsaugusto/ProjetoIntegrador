@@ -14,8 +14,8 @@ import { LoginService } from 'src/app/service/login.service';
 })
 export class PostsComponent implements OnInit {
   //Atributos
-  username:string;
-  user: Users= new Users(0,"","","","",null,null,null,null); //// Aqui
+  username: string;
+  user: Users = new Users(0, "", "", "", "", null, null, null, null); //// Aqui
   posts: Array<Posts> = new Array<Posts>();
   post: Posts = new Posts();
   idPostagem: number;
@@ -30,7 +30,7 @@ export class PostsComponent implements OnInit {
   ngOnInit() {
     this.btnClickAll();
 
-    if(!localStorage.getItem("logado")){
+    if (!localStorage.getItem("logado")) {
       this.router.navigate(['login']);
     }
     window.scrollTo(0, 0);
@@ -53,12 +53,17 @@ export class PostsComponent implements OnInit {
     });
   }
 
-  buscaPalavra(){
-    this.postService.getByPalavra(this.palavra).subscribe((postOut: Posts[]) => {
-      this.posts = postOut;
-      this.showId = false;
-      this.showAll = true;
-    });
+  buscaPalavra() {
+    if (this.palavra == null) {
+      this.btnClickAll();
+    } else {
+      this.postService.getByPalavra(this.palavra).subscribe((postOut: Posts[]) => {
+        this.posts = postOut;
+        this.showId = false;
+        this.showAll = true;
+        this.palavra = null;
+      });
+    }
   }
 
   enviarPost() {

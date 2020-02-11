@@ -86,7 +86,10 @@
             <div class="card-header bg-light d-inline-flex justify-content-between">
                 <div class="column">
                     <h2 class="font-weight-bold text-dark">{{post.titulo}}</h2>
-                    <span class="card-title text-darktext-secondary" style="text-align: right">R$ {{post.preco}}</span>
+
+                </div>
+                <div>
+                    <span class="card-title text-darktext-secondary" style="text-align: right; font-weight: bolder; font-size: x-large; color: green;" >R$ {{post.preco}}</span>
 
                 </div>
             </div>
@@ -107,7 +110,7 @@
             <div class="card-header bg-light d-inline-flex justify-content-between">
                 <div class="column">
                     <h2 class="font-weight-bold text-dark">{{post.titulo}}</h2>
-                    <span class="card-title text-darktext-secondary" style="text-align: right">R$ {{post.preco}}</span>
+                    <span class="card-title text-darktext-secondary" style="text-align: right" mask="#.##0,00">R$ {{post.preco}}</span>
 
                 </div>
             </div>

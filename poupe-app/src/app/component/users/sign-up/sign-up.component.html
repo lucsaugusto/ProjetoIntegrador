@@ -1,4 +1,9 @@
 <div class="container-fluid bg-light">
+    <script>
+        // Máscaras
+        $('.dinheiro').mask('#.##0,00', {reverse: true});
+        $('.telefone').mask('(00) 0 0000-0000');
+    </script>
 
     <div style="height: 120px;">
     </div>
@@ -37,7 +42,7 @@
                         <div class="row">
                             <div class="col">
                                 <label for="nome">Telefone</label>
-                                <input type="tel" class="form-control" id="tel" [(ngModel)]="user.telefone"
+                                <input type="tel" class="telefone form-control" id="tel" [(ngModel)]="user.telefone"
                                     placeholder="(XX) 99999-9999" maxlength="11" required>
                                 <span *ngIf='_msgErroTel'>{{_msgErroTel}}</span>
                             </div>
